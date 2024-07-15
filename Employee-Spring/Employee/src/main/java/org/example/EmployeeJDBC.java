@@ -7,7 +7,7 @@ import java.util.List;
 public class EmployeeJDBC {
     private static final String URL = "jdbc:mysql://localhost:3306/assginmentDB?useSSL=false";
     private static final String USER = "woojoo";
-    private static final String PASSWORD = "Qaz675Pl,";
+    private static final String PASSWORD = "******";
 
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
