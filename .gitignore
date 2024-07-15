@@ -4,3 +4,7 @@ Core\ Java/Employee/out/
 Core\ Java.Emplott/src/test/
 *.idea
 .DS_Store
+target/
+test/
+*.cmd
+mvnw
