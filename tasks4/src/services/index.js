@@ -6,18 +6,17 @@ const TXNS = [
 ];
 
 const memoryService = {
-    async getTransactions() {
+    async getTransactions(id) {
+        if (id) {
+            const transaction = TXNS.find(txn => txn.id === id);
+            return Promise.resolve(transaction ? [transaction]: []);
+        }
         return Promise.resolve(TXNS);
     }, 
 
     async getSingleTransaction(id) {
-        console.log(id);
-        for (const trans of TXNS) {
-            if (trans['id'] === id) {
-                return Promise.resolve(trans);
-            }
-        }
-        return Promise.reject("No transaction with id " + id + " found.");
+        const transaction = TXNS.find(txn => txn.id === id);
+        return Promise.resolve(transaction ? [transaction]: []);
     },
 
     async createTransaction({to, amount}) {

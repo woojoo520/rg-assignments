@@ -1,7 +1,8 @@
 const txnService = require('../services');
 
 async function getTransactions(req, res) {
-    const val = await txnService.getTransactions();
+    const { id } = req.query;
+    const val = await txnService.getTransactions(id);
     return res.json(val);
 }
 
