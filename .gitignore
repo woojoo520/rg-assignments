@@ -7,4 +7,6 @@ Core\ Java.Emplott/src/test/
 target/
 test/
 *.cmd
+*.csv
 mvnw
+
